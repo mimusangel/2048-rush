@@ -20,7 +20,6 @@
 # define DOWN		258
 # define LEFT		260
 # define RIGHT		261
-# define NB_MENU	2
 
 # include <ncurses.h>
 
@@ -45,6 +44,8 @@ typedef struct	s_game
 	t_scene			scene;
 	int				cursor;
 	int				moved;
+	int				win;
+	int				win_value;
 	int				**grid;
 	int				end;
 }				t_game;
@@ -67,5 +68,7 @@ void			up(t_game *game);
 void			down(t_game *game);
 void			initialize_color(void);
 int				get_color(int v);
+int				is_pow2(int v);
+void			check(t_game *game);
 
 #endif

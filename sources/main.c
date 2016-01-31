@@ -27,7 +27,9 @@ static void		init(t_game *game)
 	game->cursor = 0;
 	game->size = 4;
 	game->scene = MENU_MAIN;
+	game->win = 0;
 	game->grid = (int **)malloc(sizeof(int *) * game->size);
+	game->win_value = is_pow2(WIN_VALUE) ? WIN_VALUE : 2048;
 	i = -1;
 	while (++i < game->size)
 	{
@@ -73,6 +75,7 @@ void			reset_game(t_game *game)
 	int j;
 
 	game->score = 0;
+	game->win = 0;
 	i = -1;
 	while (++i < game->size)
 	{

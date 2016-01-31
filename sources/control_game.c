@@ -32,6 +32,11 @@ static void	moveto(t_game *game, int x, int y, t_point *dir)
 		game->grid[y][x] = 0;
 		game->moved += 1;
 		game->score += game->grid[y + dir->y][x + dir->x];
+		if (game->grid[y + dir->y][x + dir->x] == game->win_value && !game->win)
+		{
+			game->win = 1;
+			game->scene = MENU_WIN;
+		}
 	}
 }
 

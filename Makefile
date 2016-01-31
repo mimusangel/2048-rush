@@ -13,7 +13,7 @@
 .PHONY = all clean fclean re
 
 NAME = game_2048
-FILES = main.c grid.c scene.c control.c control_game.c color.c
+FILES = main.c grid.c scene.c control.c control_game.c color.c utils.c check.c
 SRC_FOLDER = sources/
 OBJ_FOLDER = build/
 SRCS = $(addprefix $(SRC_FOLDER),$(FILES))
