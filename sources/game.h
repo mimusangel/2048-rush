@@ -16,10 +16,12 @@
 # define ESCAPE		27
 # define ENTER		10
 # define RESET		114
+# define RESIZE		410
 # define UP			259
 # define DOWN		258
 # define LEFT		260
 # define RIGHT		261
+# define TIME_SLEEP	60000
 
 # include <ncurses.h>
 

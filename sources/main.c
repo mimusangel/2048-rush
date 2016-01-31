@@ -108,7 +108,7 @@ int				main(void)
 		refresh();
 		key = getch();
 		control(&game, key);
-		usleep(30000);
+		usleep(TIME_SLEEP);
 	}
 	endwin();
 	free_game(&game);

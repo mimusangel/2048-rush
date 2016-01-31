@@ -11,6 +11,8 @@
 /* ************************************************************************** */
 
 #include "game.h"
+#include <stdlib.h>
+#include <libft.h>
 
 static void	control_main(t_game *game, int key)
 {
